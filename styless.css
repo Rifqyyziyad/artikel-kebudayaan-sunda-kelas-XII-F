@@ -1,0 +1,138 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #3b3b3b;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px; /* Tambahkan padding untuk ruang */
+  }
+  
+  /* Header Styling */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #main-title {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 0.9em; /* Ukuran lebih kecil */
+    font-weight: normal; /* Tidak terlalu tebal */
+    color: #ccc; /* Warna abu-abu terang */
+    margin-top: 5px; /* Jarak di atas teks */
+    text-align: center; /* Rata tengah */
+  }
+  
+
+  /* Main Section Styling */
+  #group-table {
+    display: flex;
+    flex-wrap: wrap; /* Buat elemen otomatis melipat ke baris berikutnya */
+    justify-content: center; /* Pusatkan elemen */
+    gap: 15px; /* Jarak antar elemen */
+  }
+  
+  .group-btn {
+    width: 200px;
+    height: 80px;
+    background-color: #333;
+    border: 2px solid #777;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .group-btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  
+  .group-btn:hover {
+    background-color: #555;
+  }
+  
+  /* Footer Styling */
+  footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #aaa;
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    #group-table {
+      flex-direction: column; /* Ubah tata letak menjadi kolom */
+      gap: 10px;
+    }
+  
+    .group-btn {
+      width: 90%; /* Lebar tombol 90% dari layar */
+      height: 60px; /* Kurangi tinggi tombol */
+    }
+  
+    .group-btn a {
+      font-size: 1em;
+    }
+  
+    #main-title {
+      font-size: 1.5em;
+    }
+  
+    footer {
+      font-size: 0.8em;
+    }
+  }
+
+  .header-footer-img {
+    max-width: 100px;
+    margin: 10px auto; /* Jarak di atas/bawah gambar */
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+
+  /* Styling Gambar di Header dan Footer */
+.header-footer-img {
+  max-width: 500px; /* Atur ukuran gambar */
+  margin-bottom: 1px; /* Tambahkan sedikit ruang di bawah gambar */
+  opacity: 0; /* Gambar awalnya tidak terlihat */
+  animation: fadeIn 5s forwards; /* Animasi muncul dalam 2 detik */
+}
+
+/* Animasi Muncul Secara Pudar */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9); /* Mulai sedikit lebih kecil */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Kembali ke ukuran normal */
+  }
+}
+
+/* Animasi di Footer (Delay untuk efek transisi lebih elegan) */
+footer .header-footer-img {
+  animation-delay: 1s; /* Tambahkan jeda waktu 1 detik */
+}
+
+  
+  
